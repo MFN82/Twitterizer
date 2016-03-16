@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *textViewOutlet;
 @property (weak, nonatomic) IBOutlet UILabel *charachterCountUpdate;
 
@@ -40,5 +40,16 @@
     
 }
 
+- (BOOL)textView:(UITextView *)aTextView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    NSInteger newTextLength = [aTextView.text length] - range.length + [text length];
+    // "Length of existing text" - "Length of replaced text" + "Length of replacement text"
+    
+    if (newTextLength > 140) {
+        // don't allow change
+        return NO;
+    }
+    self.charachterCountUpdate.text = [NSString stringWithFormat:@"%li characters", (long)newTextLength];
+    return YES;
+}
 
 @end
