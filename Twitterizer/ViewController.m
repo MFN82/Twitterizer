@@ -9,6 +9,8 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *textViewOutlet;
+@property (weak, nonatomic) IBOutlet UILabel *charachterCountUpdate;
 
 @end
 
