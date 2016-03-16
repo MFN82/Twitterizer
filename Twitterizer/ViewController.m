@@ -33,9 +33,13 @@
 
 - (IBAction)addHashtagPressed:(UIButton *)sender {
     
+    NSString *userInputToTextView = self.textViewOutlet.text;
+    NSMutableString *stringToAddChar = [[NSMutableString alloc] initWithString:userInputToTextView];
+    NSString *word2 = [stringToAddChar stringByReplacingOccurrencesOfString:@" " withString:@" #"];
     
-    
+    self.textViewOutlet.text = word2;
 }
+
 - (IBAction)ReversePressed:(UIButton *)sender {
     
     NSString *userInputToTextView = self.textViewOutlet.text;
