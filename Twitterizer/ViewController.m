@@ -19,24 +19,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
 }
 - (IBAction)twitterizePressed:(UIButton *)sender {
     NSString *twitterString = self.textViewOutlet.text;
-  
+    NSCharacterSet *vowels = [NSCharacterSet characterSetWithCharactersInString:@"aeiouAEIOU"];
+
+    NSString *resultString = [[twitterString componentsSeparatedByCharactersInSet:vowels] componentsJoinedByString:@""];
     
-    NSString *stringWithoutVowels = [twitterString stringByReplacingOccurrencesOfString:i withString:@""];
-        
-    }
-    
-    self.textViewOutlet.text = stringWithoutVowels;
-    
-    
-    
+    self.textViewOutlet.text = [NSString stringWithFormat:@"%@",resultString];
+
 }
 
 - (IBAction)addHashtagPressed:(UIButton *)sender {
+    
+    
 }
 - (IBAction)ReversePressed:(UIButton *)sender {
+    
+    
 }
 
 
