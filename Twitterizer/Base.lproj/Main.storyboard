@@ -24,10 +24,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lL-bV-Ihi">
-                                <rect key="frame" x="231" y="233" width="67" height="30"/>
-                                <state key="normal" title="Twitterize"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rB4-8M-oMx">
                                 <rect key="frame" x="128" y="233" width="95" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -37,10 +33,23 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSX-wH-fcj">
                                 <rect key="frame" x="306" y="233" width="53" height="30"/>
                                 <state key="normal" title="Add a #"/>
+                                <connections>
+                                    <action selector="addHashtagPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SND-Ly-gQy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12s-9Q-vdm">
                                 <rect key="frame" x="367" y="233" width="55" height="30"/>
                                 <state key="normal" title="Reverse"/>
+                                <connections>
+                                    <action selector="ReversePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="okz-PJ-xHw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lL-bV-Ihi">
+                                <rect key="frame" x="221" y="233" width="67" height="30"/>
+                                <state key="normal" title="Twitterize"/>
+                                <connections>
+                                    <action selector="twitterizePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hG5-3M-RAp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
