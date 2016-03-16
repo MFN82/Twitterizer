@@ -34,8 +34,21 @@
 - (IBAction)addHashtagPressed:(UIButton *)sender {
     
     
+    
 }
 - (IBAction)ReversePressed:(UIButton *)sender {
+    
+    NSString *userInputToTextView = self.textViewOutlet.text;
+    NSMutableString *reversedString = [NSMutableString string];
+    NSInteger charOfIndex = userInputToTextView.length;
+    
+    while (userInputToTextView && charOfIndex > 0) {
+        charOfIndex--;
+        NSRange subStrRange = NSMakeRange(charOfIndex, 1);
+        [reversedString appendString:[userInputToTextView substringWithRange:subStrRange]];
+    }
+    
+    self.textViewOutlet.text = [NSString stringWithFormat:@"%@",reversedString];
     
     
 }
